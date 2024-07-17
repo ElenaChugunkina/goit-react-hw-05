@@ -11,7 +11,7 @@ import MovieList from '../../components/MovieList/MovieList';
 const MoviesPage = () => {
     const [movies, setMovies] = useState([]);
     const [error, setError] = useState(null);
-    const location = useLocation();
+    
     const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
@@ -36,7 +36,7 @@ const MoviesPage = () => {
         
         setSearchParams({ query: query });
         
-        searchMovies(query);
+        
 
         form.reset();
     };
